@@ -1,0 +1,250 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="M2.master.cs" Inherits="User_M2" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="text/javascript">
+        function preventBack() {
+            window.history.forward();
+        }
+        setTimeout("preventBack()", 0);
+        window.onload = function () {
+            null;
+        };
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <%--<link rel="shortcut icon" href="style/images/favicon.png" />--%>
+    <title>Smart library</title>
+    <!-- Bootstrap core CSS -->
+    <link href="style/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="style/css/plugins.css" rel="stylesheet" />
+    <link href="style/css/style.css" rel="stylesheet" />
+    <link href="style/css/color/blue.css" rel="stylesheet" />
+    <script src="../vendors/jquery/dist/jquery.min.js" type="text/javascript"></script>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet'
+        type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic'
+        rel='stylesheet' type='text/css' />
+    <link href="style/type/icons.css" rel="stylesheet" />
+
+    <link href="../Admin/fonts/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="bootstrap-datepicker/css/datepicker.css" rel="stylesheet" type="text/css" />
+    <script src="bootstrap-datepicker/js/bootstrap-datepicker.js" type="text/javascript"></script>
+    <link href="../Admin/assets/DataTable/datatables.min.css" rel="stylesheet" type="text/css" />
+    <link href="../Admin/assets/DataTable/Responsive-2.1.1/css/responsive.bootstrap.css" rel="stylesheet"
+        type="text/css" />
+   <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="crossorigin="anonymous"></script>
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+    <div id="preloader">
+        <div class="textload">
+            Loading</div>
+        <div id="status">
+            <div class="spinner">
+            </div>
+        </div>
+    </div>
+    <main class="body-wrapper">
+  <nav class="navbar">
+    <div class="navbar-header">
+      <div class="basic-wrapper"> 
+        <div class="navbar-brand"> <a href="uhome.aspx"><h1><i class="fa fa-institution"></i><span>Smart Library</span></h1> </a></div>
+        <a class="btn responsive-menu" data-toggle="collapse" data-target=".navbar-collapse"><i></i></a>
+      </div>
+      <!-- /.basic-wrapper -->  
+    </div>
+    <!-- /.navbar-header -->
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class="dropdown"><a href="#" class="dropdown-toggle js-activated" data-toggle="dropdown">Profile<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+				<li><a href="view_profile.aspx" class="changecolor" title="lydiaaqua-color">View Profile</a></li>
+	            <li><a href="change_pass.aspx" class="changecolor" title="lydiablue-color">Change Password</a></li>
+            </ul>
+        </li>
+        <li class="dropdown"><a href="#" class="dropdown-toggle js-activated" data-toggle="dropdown">Book<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+				<li><a href="Search_book.aspx" class="changecolor" title="lydiaaqua-color">Search Book</a></li>
+	            <li><a href="issued_book.aspx" class="changecolor" title="lydiablue-color">Issued Book Details</a></li>
+                <li><a href="returned_book.aspx" class="changecolor" title="lydiablue-color">Return Book Details</a></li>
+            </ul>
+        </li>
+        <li class="dropdown"><a href="#" class="dropdown-toggle js-activated" data-toggle="dropdown"><asp:Image ID="Image1" runat="server" height="35px" width="35px"></asp:Image></a>
+            <ul class="dropdown-menu">
+				<li><a href="view_profile.aspx"><asp:Label ID="Label1" runat="server" Text=""></asp:Label></a></li>
+	            <li><a href="login.aspx"   class="changecolor" title="lydiablue-color">Logout</a></li>
+            </ul>
+        </li>
+        <%--<li class="dropdown">
+                    <img src="images/gallery/image_01_400x300.jpg" height="25px" width="25px">
+                    <asp:Label ID="Label1" runat="server" ForeColor="Black" ></asp:Label>
+                          <ul class="dropdown-menu ">
+                               <li><a href="logout.aspx"><i class="fa fa-lock "></i>Logout</a></li> 
+                          </ul> 
+        </li>--%>
+      </ul>
+      <!-- /.navbar-nav --> 
+    </div>
+  </nav>
+  <!-- /.navbar -->
+  
+  <div class="tp-fullscreen-container revolution">
+    <div class="tp-fullscreen">
+      <ul>
+        <li data-transition="fade"><img src="style/images/bg2.jpg"  alt="" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat" />
+          <h1 class="tp-caption large text-center sfl" data-x="center" data-y="263" data-speed="900" data-start="800" data-easing="Sine.easeOut">hello! This Is Smart Library</h1>
+          <div class="tp-caption medium text-center sfb" data-x="center" data-y="348" data-speed="900" data-start="1500" data-easing="Sine.easeOut">Completed Library Website With various options</div>
+        </li>
+        <li data-transition="fade"> <img src="style/images/bg1.jpg"  alt="" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat" />
+          <div class="tp-caption large text-center sfl" data-x="center" data-y="283" data-speed="900" data-start="800" data-easing="Sine.easeOut">built for creatives to showcase</div>
+          <div class="tp-caption large text-center sfr" data-x="center" data-y="363" data-speed="900" data-start="1500" data-easing="Sine.easeOut">their portfolio beautifully</div>
+        </li>
+        <li data-transition="fade"> <img src="style/images/bg2.jpg"  alt="" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat" />
+          <div class="tp-caption large text-center sfb" data-x="center" data-y="293" data-speed="900" data-start="800" data-easing="Sine.easeOut">free updates & premium support</div>
+          <div class="tp-caption medium text-center sfb" data-x="center" data-y="387" data-speed="900" data-start="1500" data-easing="Sine.easeOut">you will have access to all updates and free support</div>
+        </li>
+      </ul>
+      <div class="tp-bannertimer tp-bottom"></div>
+    </div>
+    <!-- /.tp-fullscreen-container --> 
+  </div>
+  <!-- /.revolution -->
+  
+  
+  <div class="dark-wrapper">
+    <div class="container inner">
+      <div class="thin">
+        
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+      </div>
+      <!-- /.thin -->
+      <div class="divide10"></div>
+      <div class="cbp-panel">
+        
+        
+        <!--/.cbp --> 
+        
+      </div>
+      <!--/.cbp-panel -->
+      
+    </div>
+    <!-- /.container --> 
+  </div>
+  <!-- /.dark-wrapper -->
+  
+  <div class="light-wrapper">
+    <div class="col-image">
+      <div class="bg-wrapper col-md-6">
+        <div class="bg-holder" style="background-image: url(style/images/art/about.jpg);"></div>
+      </div>
+      
+    </div>
+    <!--/.col-image --> 
+    
+  </div>
+  
+  <!-- /.dark-wrapper -->
+  
+  <!-- /.light-wrapper -->
+  <footer class="footer inverse-wrapper">
+    <div class="container inner">
+      <div class="row">
+        
+        <div class="col-sm-4">
+          <!-- /.widget -->
+          <div class="widget">
+            <h4 class="widget-title">Contact Us</h4>
+            <div class="contact-info"> <i class="icon-location"></i>Bharthana Vesu <br />
+              <i class="icon-phone"></i>(+91) 90330 05040<br />
+              <i class="icon-mail"></i> <a href="yvs.libmng@gmail.com">yvs.libmng@gmail.com</a> </div>
+          </div>
+          <!-- /.widget --> 
+          
+        </div>
+        <!-- /column --> 
+        
+      </div>
+      <!-- /.row --> 
+    </div>
+    <!-- .container -->
+    
+    <div class="sub-footer">
+      <div class="container inner">
+        <p class="text-center">©2017 All Rights Reserved to Smart Library.</p>
+      </div>
+      <!-- .container --> 
+    </div>
+    <!-- .sub-footer --> 
+  </footer>
+  <!-- /footer --> 
+  
+</main>
+<!--Datatable -->
+    <script src="../Admin/assets/DataTable/DataTables-1.10.13/js/jquery.dataTables.js" type="text/javascript"></script>
+    <script src="../Admin/assets/DataTable/DataTables-1.10.13/js/dataTables.bootstrap.js" type="text/javascript"></script>
+    <script src="../Admin/assets/DataTable/Responsive-2.1.1/js/dataTables.responsive.js" type="text/javascript"></script>
+    <!--/.body-wrapper -->
+    <script src="style/js/jquery.min.js"></script>
+    <script src="style/js/bootstrap.min.js"></script>
+    <script src="style/js/plugins.js"></script>
+    <script src="style/js/classie.js"></script>
+    <script src="style/js/jquery.themepunch.tools.min.js"></script>
+    <script src="style/js/scripts.js"></script>
+    <!-- DEMO ONLY -->
+    <link rel="alternate stylesheet" property="stylesheet" type="text/css" href="switcher/aqua.css"
+        title="lydiaaqua-color" media="screen" />
+    <link rel="alternate stylesheet" property="stylesheet" type="text/css" href="switcher/blue.css"
+        title="lydiablue-color" media="screen" />
+    <link rel="alternate stylesheet" property="stylesheet" type="text/css" href="switcher/brown.css"
+        title="lydiabrown-color" media="screen" />
+    <link rel="alternate stylesheet" property="stylesheet" type="text/css" href="switcher/forest.css"
+        title="lydiaforest-color" media="screen" />
+    <link rel="alternate stylesheet" property="stylesheet" type="text/css" href="switcher/green.css"
+        title="lydiagreen-color" media="screen" />
+    <link rel="alternate stylesheet" property="stylesheet" type="text/css" href="switcher/lime.css"
+        title="lydialime-color" media="screen" />
+    <link rel="alternate stylesheet" property="stylesheet" type="text/css" href="switcher/orange.css"
+        title="lydiaorange-color" media="screen" />
+    <link rel="alternate stylesheet" property="stylesheet" type="text/css" href="switcher/pink.css"
+        title="lydiapink-color" media="screen" />
+    <link rel="alternate stylesheet" property="stylesheet" type="text/css" href="switcher/purple.css"
+        title="lydiapurple-color" media="screen" />
+    <link rel="alternate stylesheet" property="stylesheet" type="text/css" href="switcher/red.css"
+        title="lydiared-color" media="screen" />
+    <link rel="alternate stylesheet" property="stylesheet" type="text/css" href="switcher/rose.css"
+        title="lydiarose-color" media="screen" />
+    <script type="text/javascript" src="switcher/switchstylesheet.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".changecolor").switchstylesheet({ seperator: "color" });
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            if ($(".dataTable").length > 0) {
+                $(".dataTable").DataTable({
+                    dom: "Bfrtip",
+                    sort: false,
+                    responsive: true,
+//                    buttons: [
+//                                { extend: "copy", className: "btn-sm" },
+//                                { extend: "csv", className: "btn-sm" },
+//                                { extend: "print", className: "btn-sm" }
+//                            ]
+                });
+            }
+        });
+    </script>
+</body>
+</html>
